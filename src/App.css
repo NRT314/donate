@@ -1,0 +1,167 @@
+/* src/App.css */
+body {
+    background-color: #f4f7f6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.select-lang {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.token-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.token-btn {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.token-btn.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.token-btn:hover:not(.active) {
+    border-color: #007bff;
+}
+
+.donation-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.donation-table th, .donation-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.donation-table th {
+    font-weight: 600;
+    color: #555;
+}
+
+.donation-table tr:last-child td {
+    border-bottom: none;
+}
+
+.amount-input {
+    width: 100px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: right;
+}
+
+.total-amount {
+    font-weight: bold;
+    text-align: right !important;
+}
+
+.action-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.donate-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.donate-btn:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+.donate-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.status-message {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.status-message.pending { background-color: #e6f7ff; border: 1px solid #91d5ff; }
+.status-message.success { background-color: #f6ffed; border: 1px solid #b7eb8f; }
+.status-message.error { background-color: #fff1f0; border: 1px solid #ffa39e; }
+.status-message p { margin: 0; }
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    border-top-color: #007bff;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
